@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "RevMeet",
+    "slug": "revmeet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0D1117"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.revmeet",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "RevMeet uses your location to show nearby car events, photo spots, and routes.",
+        "NSCameraUsageDescription": "RevMeet needs camera access to let you photograph car spots.",
+        "NSPhotoLibraryUsageDescription": "RevMeet needs photo library access to let you share car photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0D1117"
+      },
+      "package": "com.yourname.revmeet",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_ANDROID_GOOGLE_MAPS_API_KEY"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-location",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "RevMeet needs access to your photos to share car photos.",
+          "cameraPermission": "RevMeet needs camera access to capture car photos."
+        }
+      ]
+    ],
+    "scheme": "revmeet",
+    "extra": {
+      "router": { "origin": false },
+      "eas": { "projectId": "your-eas-project-id" }
+    }
+  }
+}
