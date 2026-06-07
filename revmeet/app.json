@@ -4,14 +4,8 @@
     "slug": "revmeet",
     "version": "1.0.0",
     "orientation": "portrait",
-    "newArchEnabled": true,
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0D1117"
-    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.yourname.revmeet",
@@ -52,6 +46,14 @@
         {
           "photosPermission": "RevMeet needs access to your photos to share car photos.",
           "cameraPermission": "RevMeet needs camera access to capture car photos."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#0D1117"
         }
       ]
     ],
